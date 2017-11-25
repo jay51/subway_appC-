@@ -1,0 +1,10 @@
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\bin\Debug\subway_app.exe.config
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\bin\Debug\subway_app.exe
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\bin\Debug\subway_app.pdb
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.csprojResolveAssemblyReference.cache
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.Form1.resources
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.Properties.Resources.resources
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.csproj.GenerateResource.Cache
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.csproj.CoreCompileInputs.cache
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.exe
+C:\Users\nenoj\Desktop\visualC#\subway_app\subway_app\obj\Debug\subway_app.pdb
