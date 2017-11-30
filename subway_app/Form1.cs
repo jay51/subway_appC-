@@ -10,33 +10,60 @@ using System.Windows.Forms;
 
 namespace subway_app
 {
-    public partial class Form1 : Form
+    public partial class slideOne : Form
     {
-        public Label[] lbllist;
-        public Form1()
+        byte count;
+        int y;
+        public Label[] lblList;
+        public List<Panel> slides = new List<Panel>();
+        public slideOne()
         {
             InitializeComponent();
+            lblList = new Label[5];
+            y = 0;
+            count = 0;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        
+        private void slideOne_Load(object sender, EventArgs e)
         {
-            Button btnName = (Button)sender;
-            if (btnName == tuna || btnName == steak)
+            slides.Add(panel1);
+            slides.Add(panel2);
+            slides.Add(panel3);
+            slides.Add(panel4);
+            slides.Add(panel5);
+
+            for(int i = 0; i < lblList.Length; i++)
             {
-                lblone.Text = btnName.Text;
+                lblList[i] = new Label();
+                lblList[i].AutoSize = true;
+                lblList[i].BackColor = System.Drawing.Color.CadetBlue;
+                lblList[i].Location = new System.Drawing.Point(424, 150 + y);
+                lblList[i].Size = new System.Drawing.Size(40, 13);
+                lblList[i].TabIndex = 3;
+                y += 15;
             }
-            //this to show a message box.
-            else if (btnName == info)
+
+        }
+        
+        //asign all labels an index
+        private void mkLabel(byte i ,Button button)
+        {
+            var btnName = button;
+            if (lblList[i].Text == btnName.Text + count)
             {
-                MessageBox.Show("this futuare is not avialble yet, comming soon!");
+                count++;
+                lblList[i].Text = btnName.Text + count;
             }
             else
             {
-                lbllist = new Label[5];
-                lbllist[] = "hello world";
+                lblList[i].Text = btnName.Text + count;
+                Controls.Add(lblList[i]);
             }
-            
+
         }
+        
+
+        
         // this is to show the box befor closing the form
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -49,10 +76,62 @@ namespace subway_app
             }
 
         }
+        // for the message btn.
+        private void info_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("This feature is not added yet , but will be added soon");
+        }
 
 
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            for (int i =0; i< 5; i++)
+            {
+                slides[i].Visible = false;
+            }
+            panel1.Visible = true;
 
 
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                slides[i].Visible = false;
+            }
+            panel5.Visible = true;
+
+        }
+
+
+        private void steak_Click(object sender, EventArgs e)
+        {
+            //var btnName = (Button)sender;
+            mkLabel(0, (Button)sender);
+
+        }
+
+        private void tuna_Click(object sender, EventArgs e)
+        {
+            //var btnName = (Button)sender;
+            mkLabel(1, (Button)sender);
+
+        }
+
+        private void Bmt_Click(object sender, EventArgs e)
+        {
+            //var btnName = (Button)sender;
+            mkLabel(2, (Button)sender);
+
+        }
+
+        private void Blt_Click(object sender, EventArgs e)
+        {
+            //var btnName = (Button)sender;
+            mkLabel(3, (Button)sender);
+
+        }
     }
+
 }
